@@ -1,0 +1,20 @@
+#!/bin/bash
+
+FILENAME=$1
+DOTFILE=`expr index "$FILENAME" "."`
+FILENAME_WITHOUT_DOT=${FILENAME:0:$((DOTFILE - 1))}
+EXTENFILE=${FILENAME:DOTFILE}
+
+#Commands to compiling
+FOR_RUST=rustc
+FOR_C=gcc
+FOR_CPP=g++
+FOR_GO=go
+
+#Analizing the exten. and executing the commands
+case ${EXTENFILE} in
+	"cpp") ${FOR_CPP} "${FILENAME}" -o "${FILENAME_WITHOUT_DOT}"; ./${FILENAME_WITHOUT_DOT};;
+	"c") ${FOR_C} "${FILENAME}" -o "${FILENAME_WITHOUT_DOT}"; ./${FILENAME_WITHOUT_DOT};;
+	"rs") ${FOR_RUST} "${FILENAME}"; ./${FILENAME_WITHOUT_DOT};;
+	"go") ${FOR_GO} build "${FILENAME}"; ./${FILENAME_WITHOUT_DOT};;
+esac
