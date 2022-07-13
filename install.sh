@@ -1,8 +1,8 @@
 #!/bin/sh
 
-mkdir -p /usr/bin/my_bins
-export PATH=$PATH:/usr/bin/my_bins
-cp ./compit /usr/bin/my_bins/
+mkdir -p /usr/bin/compileIt
+export PATH=$PATH:/usr/bin/compileIt
+cp ./compit /usr/bin/compileIt
 
 echo "Successfully installed"
 echo "Try execute compit"
