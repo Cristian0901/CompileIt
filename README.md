@@ -1,25 +1,19 @@
 # Compile It
 
-It is small script which can compile and excute your programs automatically.
-
-## Compatibility
-
-This script support `.c .cpp .go .rs` files.
-
+It is small script which can compile and excute your programs quickly.
+---
+## Supported languages
+* C
+* C++
+* Go
+* Rust
+* Java
+---
 ## Requirements
-For the correctly work of this script you need install.
+You just need to have the compilers that you need.
+Supported compilers:
 
-  - `gcc or clang`   (for compile .c files)
-  - `g++ or clang++` (for compile .cpp files)
-  - `go build`       (for cmopile .go file)
-  - `rustc`          (for compile .rs file)
-
-
-If you don't want to use all functionalities, you don't need install all compilers.
-
-## How to use
-1. Execute the `install.sh` file with `sudo sh ./install.sh`
-2. Open your .zshrc/.bashrc file and add `export PATH=$PATH:/usr/bin/compileIt`
-3. Use the `compit` command
-
-The only thing that you need for start to use this script is write in a terminal `compit [filename]` and automatically your script will be compiled and executed.
+- gcc (C files)
+- g++ (C++files)
+- Go (Go files)
+- Rust (Rust files)
